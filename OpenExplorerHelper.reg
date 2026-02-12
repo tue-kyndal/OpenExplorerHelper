@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\openexplorer]
+@="URL:Open Explorer Helper"
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\openexplorer\shell\open\command]
+@="\"C:\\Program Files\\OpenExplorerHelper\\OpenExplorerHelper.exe\" \"%1\""
