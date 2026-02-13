@@ -20,6 +20,16 @@
 - `README.md` – this file.
 
 ---
+## Compile
+OpenExplorerHelper.EXE is compiled to contain all needed dot.net features. 
+It’s therefore not necessary to install any dot net.
+
+Compiles with:
+`dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true`
+
+This has the consequence that the file is rather large!! + 70MB
+If you have dot.net installed feel free to recompile to a much smaller file.
+
 
 ## Installation
 
