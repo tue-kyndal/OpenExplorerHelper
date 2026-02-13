@@ -7,7 +7,7 @@
 ## Features
 
 - Opens UNC network paths in Windows Explorer.
-- Works with links like `openexplorer://192.168.15.133/Filserver2016/sager/28600-28799/28739`.
+- Works with links like `openexplorer://192.168.1.xx/Filserver/cases/28739/`.
 - Can be used in **Edge, Edge IE mode** **Internet Explorer** or any other browser.
 - Minimal setup: just install the EXE and registry file.
 
@@ -41,7 +41,7 @@ C:\Program Files\OpenExplorerHelper\OpenExplorerHelper.exe
 - Open Run (`Win + R`) and type:
 
   ```
-  openexplorer://192.168.1.xx/Filserver/sager/28600-28799/28739
+  openexplorer://192.168.1.xx/Filserver/sager/28739
   ```
 
 - Windows Explorer should open the corresponding network folder.
@@ -62,8 +62,8 @@ You can create simple HTML pages with clickable links to network folders. Exampl
 <body>
 <h1>Test OpenExplorerHelper</h1>
 <ul>
- <li><a href="openexplorer://192.168.1.xx/Filserver/case/28600-28799/28739">Case 28739</a></li>
- <li><a href="openexplorer://192.168.1.xx/Filserver/case/28600-28799/28740">Case 28740</a></li>
+ <li><a href="openexplorer://192.168.1.xx/Filserver/cases/28739">Case 28739</a></li>
+ <li><a href="openexplorer://192.168.1.xx/Filserver/cases/28740">Case 28740</a></li>
 </ul>
 <p>Open in Edge (IE mode) or Internet Explorer.</p>
 </body>
