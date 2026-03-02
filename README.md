@@ -32,7 +32,7 @@ openexplorer://SERVER/Share/Folder/Subfolder
 
 Example:
 
-openexplorer://192.168.15.133/Filserver2016/case/28600
+openexplorer://192.168.1.xxx/server/case/28600
 
 ### Mounted Drive
 
