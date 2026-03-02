@@ -14,7 +14,7 @@ openexplorer:Z:/case/28600
 
 ------------------------------------------------------------------------
 
-## ?? Features
+## Features
 
 -   Opens Windows Explorer from a browser link
 -   Supports UNC network paths
@@ -24,7 +24,7 @@ openexplorer:Z:/case/28600
 
 ------------------------------------------------------------------------
 
-## ?? Supported Link Formats
+## Supported Link Formats
 
 ### UNC Path
 
@@ -42,7 +42,7 @@ Works with any mapped drive letter available on the client machine.
 
 ------------------------------------------------------------------------
 
-## ?? Build
+## Build
 
 Compile the project using:
 
@@ -55,7 +55,7 @@ bin/Release/net10.0/win-x64/publish/
 
 ------------------------------------------------------------------------
 
-## ?? Installation
+## Installation
 
 1.  Copy the generated .exe file to:
 
@@ -81,47 +81,7 @@ Windows Explorer.
 
 ------------------------------------------------------------------------
 
-## ?? Example HTML
-
-\<!DOCTYPE html\>
-```{=html}
-<html>
-```
-```{=html}
-<body>
-```
-```{=html}
-<ul>
-```
-```{=html}
-<li>
-```
-`<a href="openexplorer://192.168.1.xx/server/case/28600">`{=html}Open
-UNC Case`</a>`{=html}
-```{=html}
-</li>
-```
-```{=html}
-<li>
-```
-`<a href="openexplorer:Z:/case/28600">`{=html}Open Z:
-Case`</a>`{=html}
-```{=html}
-</li>
-```
-```{=html}
-</ul>
-```
-```{=html}
-</body>
-```
-```{=html}
-</html>
-```
-
-------------------------------------------------------------------------
-
-## ? Notes
+## Notes
 
 -   The application must be installed locally on each client machine.
 -   Explorer opening speed depends on network performance.
