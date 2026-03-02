@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-=======
 using System;
 using System.Diagnostics;
 
@@ -9,45 +5,28 @@ class Program
 {
     static void Main(string[] args)
     {
-        try
+        if (args.Length == 0) return;
+
+        string url = args[0];
+
+        // Remove the scheme
+        url = url.Replace("openexplorer://", "").Replace("openexplorer:", "");
+
+        // Normalize slashes
+        url = url.Replace("/", "\\");
+
+        // If it’s not a UNC path, keep the drive letter (like Z:)
+        if (!url.StartsWith("\\\\") && url.Length > 1 && url[1] == ':')
         {
-            // Make sure an argument is provided
-            if (args.Length == 0)
-            {
-                Console.WriteLine("No URL provided!");
-                Console.ReadKey(); // Pause to see message
-                return;
-            }
-
-            string url = args[0];
-
-            // Remove protocol prefix
-            url = url.Replace("openexplorer://", "");
-            url = url.Replace("openexplorer:", "");
-
-            // Convert to Windows UNC path
-            url = url.Replace("/", "\\");
-
-            // If it doesn't already start with \\ assume it's a network path
-            if (!url.StartsWith("\\\\"))
-                url = "\\\\" + url;
-
-            Console.WriteLine($"Opening Explorer at: {url}");
-
-            // Start Explorer
-            Process.Start(new ProcessStartInfo
-            {
-                FileName = "explorer.exe",
-                Arguments = url,
-                UseShellExecute = true
-            });
+            // Already a drive path, do nothing
         }
-        catch (Exception ex)
+        else if (!url.StartsWith("\\\\"))
         {
-            Console.WriteLine("Error opening Explorer: " + ex.Message);
-            Console.ReadKey(); // Pause to see the error
+            // Otherwise treat as UNC
+            url = "\\\\" + url;
         }
+
+        // Open folder
+        Process.Start("explorer.exe", url);
     }
 }
-
->>>>>>> 0f3467c59beb20808bdb6f11865fe253b39f37db
